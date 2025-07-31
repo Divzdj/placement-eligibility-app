@@ -6,22 +6,22 @@ It was a great way for me to bring together what I’ve been learning in data sc
 
 ---
 
-## 🚀 Project Overview
+##  Project Overview
 
-The goal of this app is to help **placement teams** or **EdTech platforms** evaluate student readiness for placements by filtering candidates based on:
+The goal of this app is to help placement teams or EdTech platforms evaluate student readiness for placements by filtering candidates based on:
 
 - Programming performance
 - Soft skill scores
 - Mock interview results
 
 Users can interact with the app to:
-- 🎯 Apply eligibility filters
-- 📂 Preview student records from different tables
-- 📊 View visual insights using SQL + Streamlit
+- Apply eligibility filters
+- Preview student records from different tables
+- View visual insights using SQL + Streamlit
 
 ---
 
-## 🛠️ Technologies I Used
+##  Technologies I Used
 
 I chose lightweight and beginner-friendly tools that helped me focus more on logic and less on setup:
 
@@ -34,7 +34,7 @@ I chose lightweight and beginner-friendly tools that helped me focus more on log
 
 ---
 
-## 🧠 What I Learned
+##  What I Learned
 
 - Creating **relational datasets** using `Faker` and Python
 - Writing **modular OOP code** to manage database tasks
@@ -42,7 +42,4 @@ I chose lightweight and beginner-friendly tools that helped me focus more on log
 - Building a **multi-tab Streamlit app** with filters and charts
 - Using GitHub for **version control and collaboration**
 
----
-
-## 🗂️ Folder Structure
 
