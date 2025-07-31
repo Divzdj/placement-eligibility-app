@@ -4,6 +4,10 @@ Hi! This is a project I built as part of my GUVI + IIT MiniProject to simulate a
 
 It was a great way for me to bring together what I’ve been learning in data science — from generating realistic datasets and writing SQL queries, to building an interactive web app where users can explore data and gain insights.
 
+##  Live Application
+
+Access the working demo here:  
+[Streamlit App URL](https://placement-eligibility-app-tykdjyd9aqni5nn5jihdsu.streamlit.app/)
 
 
 ##  Project Overview
