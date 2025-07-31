@@ -1,121 +1,121 @@
 placement_id,student_id,mock_interview_score,internships_completed,placement_status,company_name,placement_package,interview_rounds_cleared,placement_date
-1,1,60,1,Placed,Trujillo PLC,4.48,0,2024-04-10
-2,2,63,1,Not Ready,,,3,
-3,3,74,2,Placed,Carlson-Jackson,3.82,3,2025-07-13
-4,4,90,3,Placed,Roberts-Adams,4.66,5,2025-04-16
-5,5,46,2,Ready,,,2,
-6,6,40,1,Ready,,,4,
-7,7,97,2,Placed,"Ochoa, Taylor and Brady",4.34,4,2024-05-24
-8,8,70,3,Placed,Riddle Ltd,9.49,0,2023-10-29
-9,9,97,1,Placed,Wright Ltd,7.49,2,2024-03-20
-10,10,94,0,Ready,,,4,
-11,11,56,1,Not Ready,,,3,
-12,12,41,1,Not Ready,,,0,
-13,13,40,2,Ready,,,5,
-14,14,59,0,Not Ready,,,1,
-15,15,53,3,Placed,Juarez Ltd,10.76,0,2024-05-11
-16,16,83,0,Ready,,,2,
-17,17,81,0,Ready,,,3,
-18,18,84,0,Placed,Ray LLC,9.74,4,2024-10-29
-19,19,92,0,Placed,Hayes-Schultz,6.96,1,2025-05-02
-20,20,70,1,Not Ready,,,3,
-21,21,65,1,Not Ready,,,4,
-22,22,56,1,Ready,,,1,
-23,23,92,2,Placed,Powell Ltd,4.9,5,2024-02-17
-24,24,61,0,Placed,Gibson-Freeman,6.64,4,2024-09-26
-25,25,90,0,Not Ready,,,5,
-26,26,60,2,Placed,"Davis, Stanton and Reid",8.75,2,2024-12-19
-27,27,87,0,Placed,Flynn Group,14.46,3,2024-01-04
-28,28,55,1,Ready,,,2,
-29,29,78,1,Ready,,,3,
-30,30,41,1,Placed,Summers-Simpson,8.73,2,2024-03-21
-31,31,90,0,Placed,Morgan-Lane,13.9,2,2024-09-14
-32,32,84,1,Ready,,,3,
-33,33,47,3,Placed,Kramer-Shannon,3.18,3,2025-02-05
-34,34,67,1,Not Ready,,,5,
-35,35,64,0,Ready,,,5,
-36,36,57,0,Not Ready,,,1,
-37,37,97,1,Ready,,,0,
-38,38,96,0,Placed,Garcia Group,9.22,4,2023-08-09
-39,39,69,3,Not Ready,,,5,
-40,40,93,0,Placed,Alexander Inc,7.33,4,2025-07-23
-41,41,82,1,Placed,Harris-Barker,9.64,1,2023-11-02
-42,42,57,0,Placed,"Turner, Baxter and Mcdowell",7.88,1,2023-10-05
-43,43,97,2,Placed,Wright-Watson,10.3,2,2025-05-19
-44,44,83,2,Not Ready,,,4,
-45,45,71,1,Not Ready,,,4,
-46,46,43,2,Ready,,,0,
-47,47,55,3,Placed,Williams Ltd,10.63,0,2024-03-08
-48,48,59,0,Ready,,,1,
-49,49,46,0,Ready,,,3,
-50,50,72,0,Ready,,,1,
-51,51,46,1,Placed,"Fischer, Patterson and Davis",11.95,2,2023-10-06
-52,52,75,3,Placed,Woods and Sons,5.65,4,2024-10-04
-53,53,43,1,Not Ready,,,2,
-54,54,82,1,Ready,,,3,
-55,55,99,0,Not Ready,,,2,
-56,56,68,0,Placed,"Frazier, Smith and Dominguez",13.23,5,2025-03-17
-57,57,40,0,Ready,,,2,
-58,58,86,2,Placed,Benson-Woods,10.99,0,2024-01-12
-59,59,98,3,Not Ready,,,1,
-60,60,44,3,Not Ready,,,0,
-61,61,97,1,Ready,,,2,
-62,62,54,3,Ready,,,2,
-63,63,94,2,Placed,Cross Inc,4.18,3,2023-10-12
-64,64,99,0,Not Ready,,,4,
-65,65,94,2,Not Ready,,,5,
-66,66,66,2,Not Ready,,,5,
-67,67,47,0,Not Ready,,,4,
-68,68,71,2,Ready,,,2,
-69,69,98,1,Not Ready,,,2,
-70,70,40,3,Ready,,,5,
-71,71,57,2,Ready,,,5,
-72,72,53,0,Not Ready,,,1,
-73,73,93,3,Ready,,,1,
-74,74,76,2,Ready,,,0,
-75,75,61,2,Placed,Ibarra-Taylor,9.82,0,2025-02-13
-76,76,84,1,Placed,May Ltd,13.74,2,2023-11-10
-77,77,47,1,Not Ready,,,5,
-78,78,73,1,Placed,"Elliott, Bishop and Martin",11.95,3,2024-04-10
-79,79,88,0,Placed,Fuller and Sons,13.02,0,2025-05-31
-80,80,93,2,Not Ready,,,1,
-81,81,77,3,Ready,,,5,
-82,82,71,1,Ready,,,2,
-83,83,79,3,Not Ready,,,5,
-84,84,99,2,Not Ready,,,4,
-85,85,62,1,Not Ready,,,2,
-86,86,52,1,Placed,"Parks, Heath and Miller",4.32,2,2023-10-10
-87,87,61,3,Ready,,,1,
-88,88,43,1,Placed,Lawrence Group,3.36,0,2024-04-10
-89,89,49,1,Placed,Edwards-Taylor,7.51,5,2024-02-16
-90,90,85,1,Placed,Wright PLC,5.91,3,2024-10-09
-91,91,74,0,Placed,"Mitchell, Pugh and Johnson",3.77,2,2025-04-08
-92,92,78,3,Ready,,,4,
-93,93,64,2,Ready,,,4,
-94,94,67,0,Ready,,,1,
-95,95,92,1,Ready,,,5,
-96,96,58,1,Ready,,,2,
-97,97,78,2,Not Ready,,,1,
-98,98,42,0,Not Ready,,,5,
-99,99,98,2,Placed,Harris-Lawson,10.93,0,2023-12-13
-100,100,94,1,Ready,,,1,
-101,101,90,2,Ready,,,0,
-102,102,55,1,Ready,,,4,
-103,103,94,0,Not Ready,,,2,
-104,104,43,2,Not Ready,,,0,
-105,105,43,0,Placed,Phillips-Brown,14.81,0,2025-05-15
-106,106,77,3,Ready,,,0,
-107,107,62,3,Not Ready,,,3,
-108,108,61,1,Not Ready,,,1,
-109,109,82,0,Placed,Simpson Inc,5.23,5,2024-01-21
-110,110,97,1,Not Ready,,,4,
-111,111,76,2,Placed,"Wheeler, Rice and Levine",4.55,4,2025-07-19
-112,112,91,0,Placed,Anderson-Valencia,6.17,1,2024-09-16
-113,113,77,3,Not Ready,,,0,
-114,114,87,2,Placed,Payne-Thompson,11.98,0,2024-07-07
-115,115,65,0,Not Ready,,,2,
-116,116,55,3,Not Ready,,,2,
-117,117,43,1,Not Ready,,,3,
-118,118,58,1,Not Ready,,,1,
-119,119,68,1,Ready,,,5,
-120,120,99,1,Not Ready,,,4,
+1,1,76,3,Not Ready,,,1,
+2,2,64,0,Placed,Trujillo PLC,5.47,3,2024-04-12
+3,3,96,2,Placed,Carlson-Jackson,12.93,5,2025-07-15
+4,4,63,0,Ready,,,1,
+5,5,71,3,Not Ready,,,2,
+6,6,45,1,Not Ready,,,2,
+7,7,93,3,Ready,,,1,
+8,8,85,1,Placed,Roberts-Adams,13.2,0,2025-04-18
+9,9,73,0,Ready,,,4,
+10,10,96,1,Placed,"Ochoa, Taylor and Brady",6.13,4,2024-05-26
+11,11,95,1,Placed,Riddle Ltd,6.5,2,2023-10-31
+12,12,99,1,Placed,Wright Ltd,5.02,0,2024-03-22
+13,13,58,1,Not Ready,,,4,
+14,14,55,3,Ready,,,1,
+15,15,54,1,Not Ready,,,0,
+16,16,41,0,Not Ready,,,0,
+17,17,96,3,Placed,Juarez Ltd,14.14,1,2024-05-13
+18,18,92,1,Ready,,,3,
+19,19,51,3,Placed,Ray LLC,4.68,4,2024-10-31
+20,20,67,1,Placed,Hayes-Schultz,14.52,4,2025-05-04
+21,21,81,0,Ready,,,4,
+22,22,40,3,Placed,Powell Ltd,11.33,1,2024-02-19
+23,23,88,1,Placed,Gibson-Freeman,5.79,1,2024-09-28
+24,24,69,0,Not Ready,,,5,
+25,25,54,3,Not Ready,,,5,
+26,26,52,0,Not Ready,,,5,
+27,27,91,1,Not Ready,,,1,
+28,28,49,2,Ready,,,4,
+29,29,84,0,Ready,,,5,
+30,30,92,0,Not Ready,,,0,
+31,31,88,2,Placed,"Davis, Stanton and Reid",4.43,5,2024-12-21
+32,32,43,3,Placed,Flynn Group,12.29,1,2024-01-06
+33,33,94,3,Placed,Summers-Simpson,5.75,2,2024-03-23
+34,34,57,1,Ready,,,1,
+35,35,41,3,Ready,,,5,
+36,36,78,1,Placed,Morgan-Lane,10.18,0,2024-09-16
+37,37,45,0,Placed,Kramer-Shannon,12.83,1,2025-02-07
+38,38,100,1,Ready,,,2,
+39,39,99,0,Ready,,,4,
+40,40,52,1,Ready,,,5,
+41,41,50,0,Placed,Garcia Group,6.4,1,2023-08-11
+42,42,56,1,Ready,,,0,
+43,43,78,2,Ready,,,3,
+44,44,47,3,Placed,Alexander Inc,9.39,2,2025-07-25
+45,45,75,1,Not Ready,,,5,
+46,46,86,3,Ready,,,3,
+47,47,76,0,Placed,Harris-Barker,12.39,2,2023-11-04
+48,48,45,1,Not Ready,,,4,
+49,49,45,1,Not Ready,,,1,
+50,50,49,3,Ready,,,1,
+51,51,97,0,Ready,,,3,
+52,52,78,1,Ready,,,2,
+53,53,65,2,Not Ready,,,1,
+54,54,88,0,Placed,"Turner, Baxter and Mcdowell",10.87,1,2023-10-07
+55,55,45,0,Not Ready,,,0,
+56,56,53,0,Ready,,,2,
+57,57,60,0,Not Ready,,,3,
+58,58,85,0,Placed,Wright-Watson,10.92,1,2025-05-21
+59,59,65,2,Placed,Williams Ltd,7.59,3,2024-03-10
+60,60,85,0,Ready,,,2,
+61,61,69,0,Ready,,,4,
+62,62,70,2,Ready,,,0,
+63,63,66,1,Ready,,,3,
+64,64,78,2,Ready,,,1,
+65,65,84,3,Placed,"Fischer, Patterson and Davis",4.36,2,2023-10-08
+66,66,65,2,Not Ready,,,3,
+67,67,47,3,Not Ready,,,2,
+68,68,100,2,Placed,Woods and Sons,13.8,1,2024-10-06
+69,69,66,2,Not Ready,,,0,
+70,70,92,3,Not Ready,,,5,
+71,71,70,3,Not Ready,,,4,
+72,72,82,2,Placed,"Frazier, Smith and Dominguez",8.09,3,2025-03-19
+73,73,82,1,Placed,Benson-Woods,3.07,1,2024-01-14
+74,74,88,3,Ready,,,0,
+75,75,97,0,Ready,,,4,
+76,76,41,2,Placed,Cross Inc,5.68,0,2023-10-14
+77,77,78,0,Ready,,,5,
+78,78,81,3,Ready,,,0,
+79,79,60,2,Not Ready,,,1,
+80,80,68,1,Not Ready,,,2,
+81,81,74,2,Ready,,,3,
+82,82,81,2,Placed,Ibarra-Taylor,3.24,2,2025-02-15
+83,83,67,3,Placed,May Ltd,3.36,5,2023-11-12
+84,84,79,3,Not Ready,,,2,
+85,85,63,1,Ready,,,5,
+86,86,63,3,Placed,"Elliott, Bishop and Martin",8.03,0,2024-04-12
+87,87,72,3,Ready,,,5,
+88,88,72,1,Ready,,,5,
+89,89,46,2,Not Ready,,,1,
+90,90,54,3,Placed,Fuller and Sons,12.21,5,2025-06-02
+91,91,67,2,Placed,"Parks, Heath and Miller",3.44,3,2023-10-12
+92,92,48,2,Placed,Lawrence Group,10.33,2,2024-04-12
+93,93,58,0,Placed,Edwards-Taylor,4.57,0,2024-02-18
+94,94,61,0,Placed,Wright PLC,10.94,1,2024-10-11
+95,95,76,3,Ready,,,0,
+96,96,60,2,Ready,,,1,
+97,97,92,2,Not Ready,,,5,
+98,98,71,3,Ready,,,0,
+99,99,71,3,Not Ready,,,2,
+100,100,89,0,Placed,"Mitchell, Pugh and Johnson",5.71,1,2025-04-10
+101,101,86,2,Not Ready,,,2,
+102,102,60,1,Ready,,,1,
+103,103,68,3,Not Ready,,,4,
+104,104,41,3,Placed,Harris-Lawson,9.23,4,2023-12-15
+105,105,83,0,Placed,Phillips-Brown,13.27,2,2025-05-17
+106,106,49,0,Not Ready,,,3,
+107,107,97,1,Not Ready,,,3,
+108,108,54,1,Ready,,,0,
+109,109,94,2,Not Ready,,,0,
+110,110,43,0,Not Ready,,,4,
+111,111,62,2,Placed,Simpson Inc,14.89,3,2024-01-23
+112,112,66,3,Not Ready,,,0,
+113,113,90,0,Not Ready,,,0,
+114,114,48,3,Placed,"Wheeler, Rice and Levine",9.76,2,2025-07-21
+115,115,55,1,Ready,,,3,
+116,116,78,3,Ready,,,1,
+117,117,74,0,Placed,Anderson-Valencia,13.41,1,2024-09-18
+118,118,48,3,Ready,,,2,
+119,119,64,3,Placed,Payne-Thompson,11.0,1,2024-07-09
+120,120,42,0,Placed,Smith Inc,6.84,4,2023-08-10

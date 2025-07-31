@@ -4,7 +4,7 @@ Hi! This is a project I built as part of my GUVI + IIT MiniProject to simulate a
 
 It was a great way for me to bring together what I’ve been learning in data science — from generating realistic datasets and writing SQL queries, to building an interactive web app where users can explore data and gain insights.
 
----
+
 
 ##  Project Overview
 
@@ -19,7 +19,7 @@ Users can interact with the app to:
 - Preview student records from different tables
 - View visual insights using SQL + Streamlit
 
----
+
 
 ##  Technologies I Used
 
@@ -32,7 +32,7 @@ I chose lightweight and beginner-friendly tools that helped me focus more on log
 - **Pandas & Numpy** – for data manipulation
 - **Matplotlib / Streamlit Charts** – for visualization
 
----
+
 
 ##  What I Learned
 
