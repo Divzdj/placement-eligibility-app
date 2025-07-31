@@ -1,42 +1,48 @@
- Placement Eligibility Streamlit App
+#  Placement Eligibility Streamlit App
 
-An interactive Streamlit application that helps placement teams filter and analyze student readiness based on programming, soft skills, and mock interview performance.
+Hi! This is a project I built as part of my GUVI + IIT MiniProject to simulate a real-world placement management system using Python, SQL, and Streamlit.
 
+It was a great way for me to bring together what I’ve been learning in data science — from generating realistic datasets and writing SQL queries, to building an interactive web app where users can explore data and gain insights.
 
-Project Overview
+---
 
-This project simulates a real-world EdTech scenario where placement managers can:
+## 🚀 Project Overview
 
-Filter students based on eligibility criteria
-Preview student data across multiple tables
-View 10 insightful analytics via SQL queries and visualizations
+The goal of this app is to help **placement teams** or **EdTech platforms** evaluate student readiness for placements by filtering candidates based on:
 
-The app is powered by SQLite, Python (OOP), Faker (for synthetic data), and Streamlit for the UI.
+- Programming performance
+- Soft skill scores
+- Mock interview results
 
+Users can interact with the app to:
+- 🎯 Apply eligibility filters
+- 📂 Preview student records from different tables
+- 📊 View visual insights using SQL + Streamlit
 
+---
 
-Technologies Used
+## 🛠️ Technologies I Used
 
-Python 3.8+
-Streamlit
-SQLite3
-Faker – for generating realistic fake data
-Pandas / Numpy
-Matplotlib / Streamlit built-in charts
+I chose lightweight and beginner-friendly tools that helped me focus more on logic and less on setup:
 
+- **Python 3.8+**
+- **Streamlit** – for UI
+- **SQLite3** – simple and easy to use locally
+- **Faker** – for generating realistic fake student data
+- **Pandas & Numpy** – for data manipulation
+- **Matplotlib / Streamlit Charts** – for visualization
 
+---
 
- Folder Structure
+## 🧠 What I Learned
 
-placement_eligibility_app/
-├── data/
-│ └── placement.db # SQLite database
-├── src/
-│ ├── data_generator.py # Generates synthetic data
-│ └── db_manager.py # OOP class for DB interaction
-├── insights.sql # 10 SQL queries for dashboard insights
-├── streamlit_app.py # Main Streamlit app
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
+- Creating **relational datasets** using `Faker` and Python
+- Writing **modular OOP code** to manage database tasks
+- Structuring and loading **SQL queries** from a `.sql` file
+- Building a **multi-tab Streamlit app** with filters and charts
+- Using GitHub for **version control and collaboration**
 
- 
+---
+
+## 🗂️ Folder Structure
+
