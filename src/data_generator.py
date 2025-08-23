@@ -1,47 +1,75 @@
-import sqlite3
-import pandas as pd
+from faker import Faker
+import random
+from db_manager import DatabaseManager
 
-class DatabaseManager:
-    def __init__(self, db_path="data/placement.db"):
-        # Store the path to the database file
-        self.db_path = db_path
-        self.conn = None  # This will hold the connection object later
+# Initialize Faker
+fake = Faker()
+Faker.seed(42)
+random.seed(42)
 
-    def connect_db(self):
-        # Connect to the database only if not already connected
-        if self.conn is None:
-            self.conn = sqlite3.connect(self.db_path)
-            print("Yay! Database connected successfully!")  
-        else:
-            print("Already connected to the database.")
+# Initialize DB
+db = DatabaseManager()
+db.create_students_table()
+db.create_programming_table()
+db.create_softskills_table()
+db.create_placements_table()
 
-    def close_db(self):
-        # Close the connection if it is open
-        if self.conn:
-            self.conn.close()
-            self.conn = None
-            print("Database connection is now closed. Bye!")
-        else:
-            print("No database connection to close.")
+# Helper lists
+batches = ["Batch A", "Batch B", "Batch C"]
+placement_statuses = ["Placed", "Not Placed"]
 
-    def run_query(self, query, params=None):
-        # This method will run any query we give it
-        self.connect_db()  
-        cur = self.conn.cursor()
-        if params is None:
-            cur.execute(query)
-        else:
-            cur.execute(query, params)
-        self.conn.commit()  # commit changes to the database
-        print("Query ran and changes committed to database!")
-        return cur
+# Generate 100 students
+for student_id in range(1, 101):
+    # -------------------- Students --------------------
+    name = fake.name()
+    age = random.randint(20, 25)
+    gender = random.choice(["Male", "Female", "Other"])
+    email = fake.email()
+    course_batch = random.choice(batches)
+    enrollment_year = random.randint(2020, 2023)
+    graduation_year = enrollment_year + 4
 
-    def get_data(self, query, params=None):
-        # Fetch data and return as pandas DataFrame
-        self.connect_db()  
-        if params:
-            df = pd.read_sql_query(query, self.conn, params=params)
-        else:
-            df = pd.read_sql_query(query, self.conn)
-        print("Got data! Returning as DataFrame now.")
-        return df
+    db.cursor.execute('''
+        INSERT INTO Students (student_id, name, age, gender, email, course_batch, enrollment_year, graduation_year)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    ''', (student_id, name, age, gender, email, course_batch, enrollment_year, graduation_year))
+
+    # -------------------- Programming --------------------
+    problems_solved = random.randint(10, 200)
+    certifications_earned = random.randint(0, 10)
+
+    db.cursor.execute('''
+        INSERT INTO Programming (student_id, problems_solved, certifications_earned)
+        VALUES (?, ?, ?)
+    ''', (student_id, problems_solved, certifications_earned))
+
+    # -------------------- SoftSkills --------------------
+    communication = random.randint(1, 10)
+    teamwork = random.randint(1, 10)
+    presentation = random.randint(1, 10)
+    leadership = random.randint(1, 10)
+    critical_thinking = random.randint(1, 10)
+    interpersonal_skills = random.randint(1, 10)
+
+    db.cursor.execute('''
+        INSERT INTO SoftSkills (student_id, communication, teamwork, presentation, leadership, critical_thinking, interpersonal_skills)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+    ''', (student_id, communication, teamwork, presentation, leadership, critical_thinking, interpersonal_skills))
+
+    # -------------------- Placements --------------------
+    placement_status = random.choice(placement_statuses)
+    mock_interview_score = round(random.uniform(50, 100), 2)
+    placement_package = round(random.uniform(3.0, 15.0), 2) if placement_status == "Placed" else None
+    internships_completed = random.randint(0, 5)
+    interview_rounds_cleared = random.randint(0, 5)
+
+    db.cursor.execute('''
+        INSERT INTO Placements (student_id, placement_status, mock_interview_score, placement_package, internships_completed, interview_rounds_cleared)
+        VALUES (?, ?, ?, ?, ?, ?)
+    ''', (student_id, placement_status, mock_interview_score, placement_package, internships_completed, interview_rounds_cleared))
+
+# Commit and close
+db.conn.commit()
+db.close()
+
+print("Database generated with 100 students and related tables!")

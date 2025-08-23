@@ -1,70 +1,74 @@
 import streamlit as st
-from src.db_manager import DatabaseManager  # this file helps to connect to the database and run SQL
+from src.db_manager import DatabaseManager
+import pandas as pd
 
-# connect to database using the class
-db = DatabaseManager()
+db = DatabaseManager("placement.db")
 
-# setup the Streamlit page
+
+# -------------------- Page setup --------------------
 st.set_page_config(page_title="Placement App", layout="wide")
 st.title("My Placement Eligibility App (Beginner Version)")
 
-# Let user choose what they want to do
+# Sidebar options
 option = st.sidebar.radio("Choose one option", ["Check Eligible Students", "See Table Data", "See Insights"])
 
-
+# -------------------- Check Eligible Students --------------------
 if option == "Check Eligible Students":
     st.sidebar.header("Set Your Filters")
 
-    # take input from user using sliders
-    min_problems = st.sidebar.slider("Minimum Problems Solved", 0, 150, 30)
-    min_softskills = st.sidebar.slider("Minimum Soft Skills Average", 0, 100, 60)
+    min_problems = st.sidebar.slider("Minimum Problems Solved", 0, 200, 30)
+    min_softskills = st.sidebar.slider("Minimum Soft Skills Average", 0, 10, 6)
     min_mock = st.sidebar.slider("Minimum Mock Interview Score", 0, 100, 50)
 
-    # SQL query with 3 filters
+    # Fetch combined data
     sql = """
-    SELECT s.student_id, s.name, s.email, s.course_batch, p.problems_solved,
-           ss.communication, ss.teamwork, ss.presentation,
-           pl.mock_interview_score, pl.placement_status
-    FROM Students s
-    JOIN Programming p ON s.student_id = p.student_id
-    JOIN SoftSkills ss ON s.student_id = ss.student_id
-    JOIN Placements pl ON s.student_id = pl.student_id
-    WHERE p.problems_solved >= ?
-      AND (
-        (ss.communication + ss.teamwork + ss.presentation + ss.leadership + ss.critical_thinking + ss.interpersonal_skills)/6
-      ) >= ?
-      AND pl.mock_interview_score >= ?
-    ORDER BY p.problems_solved DESC
+        SELECT s.student_id, s.name, s.email, s.course_batch, 
+               p.problems_solved, p.certifications_earned,
+               ss.communication, ss.teamwork, ss.presentation, 
+               ss.leadership, ss.critical_thinking, ss.interpersonal_skills,
+               pl.mock_interview_score, pl.placement_status
+        FROM Students s
+        JOIN Programming p ON s.student_id = p.student_id
+        JOIN SoftSkills ss ON s.student_id = ss.student_id
+        JOIN Placements pl ON s.student_id = pl.student_id
     """
+    df = db.fetch_dataframe(sql)
 
-    # run the query with filters
-    results = db.fetch_dataframe(sql, params=(min_problems, min_softskills, min_mock))
+    # Calculate average soft skills
+    soft_cols = ["communication", "teamwork", "presentation", "leadership", "critical_thinking", "interpersonal_skills"]
+    df["avg_softskills"] = df[soft_cols].mean(axis=1)
 
-    # show the result
+    # Apply filters
+    filtered = df[
+        (df["problems_solved"] >= min_problems) &
+        (df["avg_softskills"] >= min_softskills) &
+        (df["mock_interview_score"] >= min_mock)
+    ]
+
     st.subheader("Students who matched the filters")
-    st.write("Number of students found: ", results.shape[0])
-    st.dataframe(results)
+    st.write("Number of students found:", filtered.shape[0])
+    st.dataframe(filtered)
 
-    # download option
-    st.download_button("Download as CSV", data=results.to_csv(index=False), file_name="eligible_students.csv", mime="text/csv")
+    st.download_button(
+        "Download as CSV",
+        data=filtered.to_csv(index=False).encode('utf-8'),
+        file_name="eligible_students.csv",
+        mime="text/csv"
+    )
 
-
+# -------------------- See Table Data --------------------
 elif option == "See Table Data":
     st.subheader("See any Table")
     table_name = st.selectbox("Choose a table", ["Students", "Programming", "SoftSkills", "Placements"])
-
-    sql = f"SELECT * FROM {table_name}"
-    df = db.fetch_dataframe(sql)
-
+    df = db.fetch_dataframe(f"SELECT * FROM {table_name}")
     st.write("Data from table:", table_name)
     st.dataframe(df)
 
-
-
+# -------------------- See Insights --------------------
 elif option == "See Insights":
     st.subheader("Some Insights from Data")
 
-    # try loading SQL file
+    # Load SQL file
     try:
         with open("insights.sql", "r") as file:
             content = file.read()
@@ -86,14 +90,13 @@ elif option == "See Insights":
         "Interview Rounds Cleared vs Status"
     ]
 
-    # loop through all insights and display
-    for i in range(len(all_queries)):
+    # Display insights
+    for i, query in enumerate(all_queries):
         st.markdown(f"### {titles[i] if i < len(titles) else 'Insight ' + str(i+1)}")
         try:
-            df = db.fetch_dataframe(all_queries[i])
+            df = db.fetch_dataframe(query)
             st.dataframe(df)
 
-            #Visualizations 
             if i == 0:
                 st.bar_chart(df.set_index("course_batch")["avg_problems_solved"])
             elif i == 1:
