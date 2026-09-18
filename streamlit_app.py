@@ -1,13 +1,23 @@
 import streamlit as st
 from src.db_manager import DatabaseManager
-import pandas as pd
+from pathlib import Path
+from src.data_generator import seed_demo_data
 
-db = DatabaseManager("placement.db")
+BASE_DIR = Path(__file__).resolve().parent
 
 
 # -------------------- Page setup --------------------
 st.set_page_config(page_title="Placement App", layout="wide")
 st.title("My Placement Eligibility App (Beginner Version)")
+
+try:
+    db = DatabaseManager()
+    db.initialize()
+    seed_demo_data(db)
+except Exception as exc:
+    st.error(f"Could not initialize the placement database: {exc}")
+    st.stop()
+st.caption("Demonstration using synthetic student records.")
 
 # Sidebar options
 option = st.sidebar.radio("Choose one option", ["Check Eligible Students", "See Table Data", "See Insights"])
@@ -70,7 +80,7 @@ elif option == "See Insights":
 
     # Load SQL file
     try:
-        with open("insights.sql", "r") as file:
+        with open(BASE_DIR / "insights.sql", "r") as file:
             content = file.read()
             all_queries = [q.strip() for q in content.split(";") if q.strip()]
     except:
@@ -119,3 +129,6 @@ elif option == "See Insights":
                 st.line_chart(df.set_index("interview_rounds_cleared")["placed_count"])
         except Exception as e:
             st.error("Something went wrong: " + str(e))
+
+# Each Streamlit rerun opens its own connection.
+db.close()
